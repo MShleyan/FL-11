@@ -1,0 +1,253 @@
+
+
+@mixin line($colorLine, $widthLine:1px){
+	&::after{
+	content: '';
+  width: $widthLine;
+	height: 20px;
+	background: $colorLine;
+	display: flex;
+	position: absolute;
+	
+	z-index: -1;
+
+		}
+}
+%button-size{
+width: 100px;
+	height: 40px;
+}
+body{
+	margin:0px;
+	font-family: $fontHeader;
+	background-color: $bodyBgColor;
+}
+.header{
+	background-image: $backgroundImage;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 550px;
+	border-bottom-right-radius: 400px 200px; 
+	color: $textColor;
+.header-wrap{
+	margin-left: 150px;
+	img{
+		margin-top: 30px;
+		
+	}
+	p{
+
+		margin-left: 5px;
+		
+		display: inline-block;
+		vertical-align: top;
+		font-size: 30px;
+		font-weight: bold;
+		span{
+			display: block;
+			text-align: center;
+			font-weight: normal;
+			font-size: 12px;
+		}
+
+	}
+	.header_heading {
+		font-size: 50px;
+		width: 500px;
+		margin: 0px;
+		
+		position: relative;
+		z-index: 1;
+
+	@include line($colorLine, $widthLine:210px);
+	&::after{
+	bottom: 8px;
+}
+	}
+	.header_text
+	{
+		display: block;
+		font-family: $fontAbout;
+		font-size: 15px;
+		width: 600px;
+		margin-top: 50px;
+
+		
+	}
+}
+}
+.header_button{
+	background-color:$buttonColor;
+	border-radius: 5px;
+	@extend %button-size;
+	color:white;
+	font-size: 15px;
+	border-color: $buttonColor;
+	margin-top: 35px;
+}
+main{
+	text-align: center;
+
+
+	.section_text{
+		font-size: 30px;
+		font-weight: bold;
+		width: 310px;
+		display: block;
+		
+		margin: auto;
+@include line($colorLine, $widthLine:140px);
+&::after{
+bottom: 30px;
+left: 680px;
+}
+	}
+	.section_card{
+		display: inline-block;
+		background-color: $cardBgColor;
+		width: 300px;
+		height: 364px;
+		vertical-align:middle;
+		color: white;
+		border-radius: 5px;
+		margin:5px;
+		img{
+			margin-top: 10px;
+		}
+		.section_card_heading{
+			font-size: 20px;
+			font-weight: bold;
+			position: relative;
+			z-index: 1;
+		@include line($colorLine, $widthLine:160px);
+&::after{
+left:70px;
+bottom: 1%;
+
+}
+		}
+		.section_card_text{
+			color: $colorDescriptionText;
+			font-size:15px ;
+		}
+	}
+	.section_banner_text_wrap{
+		display: block;
+		background: linear-gradient(to bottom left, $gradientFirtsColor, $gradientSecondColor);
+		width: 700px;
+		border-radius: 7px;
+		height: 120px;
+		position: absolute;
+	}
+	.section_banner{
+
+		text-align: left;
+		margin:auto;
+		background: linear-gradient(to bottom left, $gradientFirtsColor, $gradientSecondColor);
+		width: 700px;
+		border-radius: 7px;
+		height: 100px;
+		display: block;
+		margin-top: 100px;
+
+		.section_banner_heading{
+			font-weight: bold;
+			font-size: 20px;
+			color: $textColor;
+			margin-top:20px;
+			margin-left: 100px;
+			position: relative;
+			z-index: 1;
+			@include line($colorLine, $widthLine:45px);
+	&::after{
+	bottom:1%;
+	left:80px;
+}
+
+		}
+		.section_banner_text{
+			color: $colorDescriptionText;
+			
+			font-size: 13px;
+			margin-left: 100px;
+			margin-top: 0px;
+		}
+		button{
+			background-color:$buttonColor;
+	border-radius: 5px;
+	@extend %button-size;
+	color:white;
+	font-size: 15px;
+	border-color: $buttonColor;
+	position: relative;
+	top:35px;
+	left: 500px;
+
+		}
+	}
+.section_text{
+	color:$textColor;
+}
+}
+footer{
+
+	width: 100%;
+	color: $colorDescriptionText;
+		background-color: $footerBgColor;
+		display: inline-block;
+		vertical-align: middle;
+		.footer-wrap{
+			img{
+				vertical-align: middle;
+				position: relative;
+				top:12px;
+			}
+		p{
+			margin-top: 50px;
+display: inline-block;
+		margin-left: 5px;
+		vertical-align: middle;
+
+	
+		
+		font-size: 30px;
+		font-weight: bold;
+		margin-right: 300px;
+
+		span{
+			display: block;
+			margin-top:0px;
+			margin-left: 15px;
+			text-align: center;
+			font-weight: normal;
+			font-size: 12px;
+			float: none;
+		}
+	}
+.footer_text{
+		width: 540px;
+		font-size: 15px;
+		width: 300px;
+
+
+	}
+	}
+	
+		
+	.footer_logo{
+		display: inline-block;
+
+	} 
+
+			 span {
+			 	
+			 	margin-top: 80px;
+			 	margin-right: 50px;
+				display: inline-block;
+				vertical-align: middle;
+				float: right;
+			
+	}
+	
+}
