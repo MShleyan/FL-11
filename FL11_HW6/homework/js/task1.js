@@ -1,0 +1,10 @@
+var a1=prompt("Введите а1",0);
+var a2=prompt("Введите а2",0);
+var b1=prompt("Введите b1",0);
+var b2=prompt("Введите b2",0);
+var c1=prompt("Введите с1",0);
+var c2=prompt("Введите с2",0);
+var S1=Math.sqrt(Math.pow((a1-b1),2)+ Math.pow((a2-b2),2));
+var S2=Math.sqrt(Math.pow((a1-c1),2)+ Math.pow((a2-c2),2));
+if(S1/2==S2)console.log(true);
+else console.log(false);
